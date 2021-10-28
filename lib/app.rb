@@ -7,6 +7,9 @@ class BattleApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+$points1 = 100
+$points2 = 100
+
   get '/' do
     # 'Testing infrastructure working!'
     erb(:index)
@@ -24,6 +27,12 @@ class BattleApp < Sinatra::Base
     @name2 = session['name_2']
     erb(:play)
   end
+
+get '/hit_points' do
+  @points1 = $points1
+  @points2 = $points2
+  erb(:hit_points)
+end
 
   run! if app_file == $0
 end
