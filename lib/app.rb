@@ -7,8 +7,8 @@ class BattleApp < Sinatra::Base
   end
 
   get '/' do
-    #  'Hello Battle!'
-    erb(:start)
+     'Testing infrastructure working!'
+    # erb(:start)
   end
 
     run! if app_file == $0
