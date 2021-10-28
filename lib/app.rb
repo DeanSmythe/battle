@@ -25,6 +25,9 @@ $points2 = 100
 
     @name1 = session['name_1']
     @name2 = session['name_2']
+
+
+
     erb(:play)
   end
 
@@ -33,6 +36,8 @@ get '/hit_points' do
   @points2 = $points2
   erb(:hit_points)
 end
+
+  post '
 
   run! if app_file == $0
 end
